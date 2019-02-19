@@ -40,11 +40,11 @@ public:
 	CMatrix operator -(const CMatrix& m2);						// Done
 	CMatrix operator *(double num);								// Done
 	CMatrix operator *(const CMatrix& m2);						// Done
-	bool operator ==(const CMatrix& m2);						// Done
+	bool operator==(const CMatrix<T>& m2) const;				// Done
 	T* operator [](unsigned int index);							// Done
 
 	friend std::ostream & operator<< <>(std::ostream & output, const CMatrix & matrix);	// Done
-	friend std::istream & operator>> <>(std::istream & input, CMatrix<T> & matrix);		// Done
+	friend std::istream & operator>> <>(std::istream & input, CMatrix & matrix);		// Done
 };
 
 

@@ -156,7 +156,7 @@ CMatrix<T> CMatrix<T>::operator *(const CMatrix &m2) {
 }
 
 template <typename T>
-bool CMatrix<T>::operator ==(const CMatrix & m2) {
+bool CMatrix<T>::operator==(const CMatrix<T>& m2) const {
 	if (m_rows != m2.m_rows || m_columns != m2.m_columns) {
 		return false;
 	}

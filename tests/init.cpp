@@ -1,5 +1,5 @@
 #include "Matrix.h"
-#include <catch.hpp>
+#include "catch.hpp"
 
 SCENARIO("Matrix init", "[init]") {
 	GIVEN("The number of rows and columns") {
@@ -24,7 +24,8 @@ SCENARIO("Matrix: operator +", "[addition]") {
 	B.readFromFile("B2x2.txt");
 	expected.readFromFile("A+B.txt");
 
-	CMatrix<int> result = A + B;
+	CMatrix<int> result;
+	result = A + B;
 	REQUIRE(result == expected);
 }
 
